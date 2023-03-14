@@ -1,14 +1,59 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
   <title>Coronavirus</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="./assets/img/corona-logo.svg">
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css" >
+  <script src="assets/bootstrap/jquery-3.5.1.slim.min.js"></script>
+  <script src="assets/bootstrap/jquery.morecontent.js"></script>
+  <script src="assets/bootstrap/popper.min.js" ></script>
+  <script src="assets/bootstrap/bootstrap.min.js"></script>
+  <!-- <script src="assets/bootstrap/readmore.js"></script> -->
+
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="assets/uikit/uikit.min.css" />
+<!-- <link rel="stylesheet" href="assets/css/uikit-rtl.css" /> -->
+<!-- UIkit JS -->
+<script src="assets/uikit/uikit.min.js"></script>
+<script src="assets/uikit/uikit-icons.min.js"></script>
+<!-- icones -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
 </head>
-<body>
+<style>
+  #map{
+    height: 300px;
+  }
+  #maps{
+    height: 90%;
+  }
+.mapboxgl-popup-content{
+    width: 125px;
+    text-align: end;
+    color: red;
+    border-radius: 10px;
+}
+.mapboxgl-canvas {
+    position: inherit;
+    border-radius: 15px;
+}
+.mapboxgl-ctrl-attrib-inner{
+  display: none;
+}
+
+
+
+</style>
+<body style="text-align: right;font-family: 'Tajawal', sans-serif;">
   <app-root></app-root>
 </body>
+
+
+
+
 </html>

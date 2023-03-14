@@ -1,0 +1,473 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="direction:rtl;background: #fff8f8;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#" style="font-size: 20px; font-weight: 500">
+        <img src="../../assets/img/corona-logo.svg" width="30" height="30" alt="" loading="COVID-19"> COVID-19
+    </a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <button href="#modal-overflow" uk-toggle class="uk-button uk-button-default mu-button"
+                    style="margin-right:10px" type="submit">المصدر</button>
+                <div id="modal-overflow" uk-modal>
+                    <div class="uk-modal-dialog" style="border-radius: 10px">
+
+                        <button class="uk-modal-close-default" style="left: 0;" type="button" uk-close></button>
+
+                        <div class="uk-modal-header" style="border-radius: 15px 16px 0px 0px;">
+                            <h2 class="uk-modal-title" style="color:#ec4846;">المصادر</h2>
+                        </div>
+
+                        <div class="uk-modal-body" uk-overflow-auto>
+
+                            <p>تم تصميم هذا الموقع من قبل مقتدى نجم وفائدته هي خدمة
+                                الجميع وإيصال طرق الوقاية حتى نتمكن من التغلب على هذه الأزمة بسبب وباء COVID-19.</p>
+
+                            <p>تم أخذ جميع المعلومات حول فيروس COVID-19 من طرق الوقاية وطرق انتقال الفيروس من قبل منظمة
+                                الصحة العالمية <a href="https://who.int" style="color:#ec4846" target="index"> who.int
+                                </a></p>
+
+                            <p>يتم أخذ جميع إحصائيات الإصابات والوفيات من مصدر موثوق به ، ويتم تحديث البيانات تلقائيًا
+                                عندما يتم نشر البيانات الجديدة من قبل دول العالم.</p>
+
+                            <p>يحظر عرض الموقع بمبالغ مالية ، ويحظر أيضًا تسويق محتويات الموقع بأي شكل من الأشكال. لديك
+                                الحق في أخذ ما بداخل الموقع ، ولكن يجب ذكر المصدر وعدم أخذ ما بداخل الموقع وبيعه مقابل
+                                رسوم.</p>
+
+                            <p>الشكر الى مينا المسعودي على المساعدة في التدقيق الإملائي</p>
+
+                            <p>جميع الحقوق محفوظة لموقع <a href="https://season-iq.com" style="color:#ec4846"
+                                    target="index"> season-iq.com</a> من قبل مقتدى نجم.</p>
+
+                        </div>
+
+                        <div class="uk-modal-footer uk-text-right" style="border-radius: 15px">
+                            <button class="uk-button uk-button-default uk-modal-close mu-button"
+                                style="border-radius: 0" type="button">الغاء</button>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <button routerLink="/Ask" class="uk-button uk-button-default mu-button mu-button-2"
+                    style="margin-right:10px" type="submit">الأسئلة</button>
+            </li>
+            <li class="nav-item active">
+                <button routerLink="/home" class="uk-button uk-button-default mu-button mu-button-2"
+                    style="margin-right:10px" type="submit">الرئيسية</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="mu-home" id="الرئيسي">
+    <div class="" style="padding:15px 15px">
+        <div class="row">
+            <div class="col-12 col-xl-8 col-lg-12 col-md-12 col-sm-12 ">
+                <div class="row">
+                    <div class="col-6  col-xl-3 col-lg-3 col-md-3 col-sm-6 ">
+                        <div class="uk-card uk-card-default mu-card" style="padding: 20px 15px;border-radius: 15px;">
+                            <span class="uk-card-title mu-title">الإصابات</span>
+                            <i class="fas fa-caret-up" style="padding: 10px;color: #ec4846;"></i>
+                            <app-seleton-loader *ngIf="!allLoaded" Cwidth="100%" Cheight="20"></app-seleton-loader>
+                            <h2 *ngIf="allLoaded" class="mu-num" style="margin: 0">{{alldata[0].status}}</h2>
+                        </div>
+                    </div>
+                    <div class="col-6  col-xl-3 col-lg-3 col-md-3 col-sm-6 ">
+                        <div class="uk-card uk-card-default mu-card" style="padding: 20px 15px;border-radius: 15px;">
+                            <span class="uk-card-title mu-title" style="color: #5db876;">الشفاء</span>
+                            <i class="fas fa-caret-down" style="padding: 10px;color: #5db876;"></i>
+                            <app-seleton-loader *ngIf="!allLoaded" Cwidth="100%" Cheight="20"></app-seleton-loader>
+                            <h2 *ngIf="allLoaded" class="mu-num" style="margin: 0">{{alldata[0].recovered}}</h2>
+
+                        </div>
+                    </div>
+                    <div class="col-6  col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                        <div class="uk-card uk-card-default mu-card" style="padding: 20px 15px;border-radius: 15px;">
+                            <span class="uk-card-title mu-title">الموتى</span>
+                            <i class="fas fa-caret-up" style="padding: 10px;color: #ec4846;"></i>
+                            <app-seleton-loader *ngIf="!allLoaded" Cwidth="100%" Cheight="20"></app-seleton-loader>
+                            <h2 *ngIf="allLoaded" class="mu-num" style="margin: 0">{{alldata[0].deaths}}</h2>
+                        </div>
+                    </div>
+                    <div class="col-6  col-xl-3 col-lg-3 col-md-3 col-sm-6 ">
+                        <div class="uk-card uk-card-default mu-card" style="padding: 20px 15px;border-radius: 15px;">
+                            <span class="uk-card-title mu-title">الراقدين</span>
+                            <i class="fas fa-caret-up" style="padding: 10px;color: #ec4846;"></i>
+                            <app-seleton-loader *ngIf="!allLoaded" Cwidth="100%" Cheight="20"></app-seleton-loader>
+                            <h2 *ngIf="allLoaded" class="mu-num" style="margin: 0">{{alldata[0].carnt}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top:15px">
+                    <div class="col-12">
+                        <div class="uk-card uk-card-default" style="padding:15px 12px 8px 12px;border-radius: 15px;">
+                            <div class="row">
+                                <!-- الخريطة -->
+                                <div class="col-12 col-xl-8 col-lg-8 col-md-12 col-sm-12 " style="height: 300px;">
+                                    <span style="font-size: 20px;color:#ec4846">خريطة الاحصائيات العالمية</span>
+                                    <div class="map" id="maps" style="width: 100%;"></div>
+                                </div>
+                                <!-- اعلى الدول -->
+                                <div class="col-12 col-xl-4 col-lg-4 col-md-12 col-sm-12 ">
+                                    <span style="font-size: 20px;color:#ec4846">اعلى الدول</span>
+                                    <div class="row">
+                                        <div class="col-12 col-xl-12 col-lg-12 col-md-4 col-sm-12">
+                                            <div class="uk-card uk-card-default"
+                                                style="padding:8px 12px;border-radius: 15px;box-shadow: none;border: 1px solid #c4b9b945; margin:10px 0px 0px 0px;">
+                                                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <circle-progress *ngIf="loaded" [percent]=datastatus[0].range
+                                                            [radius]="30" [backgroundGradient]="true"
+                                                            [backgroundOpacity]="1" [titleFontSize]="14"
+                                                            [backgroundPadding]="-15" [backgroundColor]="'#f9e9e9'"
+                                                            [backgroundGradientStopColor]="'#f9e9e9'"
+                                                            [subtitleFontSize]="12" [outerStrokeWidth]="4"
+                                                            [innerStrokeWidth]="-1" [outerStrokeColor]="'#ec4846e6'"
+                                                            [innerStrokeColor]="'#f6bebe'" [subtitleColor]="'#5db876'"
+                                                            [animation]="true" [animationDuration]="300"
+                                                            [titleColor]="'#ec4846'"
+                                                            [unitsColor]="'#ec4846'"></circle-progress>
+                                                        <app-seleton-loader *ngIf="!loaded" style="margin: 0px"
+                                                            Margin="0px 0px" Cwidth="65" Cheight="65"
+                                                            Circle="true"></app-seleton-loader>
+                                                    </div>
+                                                    <div class="uk-width-expand">
+                                                        <h4 *ngIf="loaded" class="uk-margin-remove-bottom"
+                                                            style="color:#ec4846;">{{datastatus[0].name}}</h4>
+                                                        <h4 *ngIf="!loaded" class="uk-margin-remove-bottom"
+                                                            style="color:#ec4846;">
+                                                            <app-seleton-loader style="margin: 6px 0px;"
+                                                                Margin="4px 0px" Cwidth="40"
+                                                                Cheight="10"></app-seleton-loader>
+                                                        </h4>
+                                                        <span class="uk-text-meta uk-margin-remove-top">
+                                                            <h6 *ngIf="loaded" class="mu-t-size" style="margin: 0">
+                                                                الإصابات : {{datastatus[0].status}}</h6>
+                                                            <h6 *ngIf="loaded" class="mu-t-size"
+                                                                style="margin:0;color: #128e5a;">الشفاء :
+                                                                {{datastatus[0].recovered}}</h6>
+                                                            <app-seleton-loader *ngIf="!loaded" style="margin: 6px 0px;"
+                                                                Margin="4px 0px" Cwidth="100%"
+                                                                Cheight="15"></app-seleton-loader>
+                                                            <app-seleton-loader *ngIf="!loaded" style="margin:0px;"
+                                                                Margin="4px 0px" Cwidth="100%"
+                                                                Cheight="15"></app-seleton-loader>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-xl-12 col-lg-12 col-md-4 col-sm-12">
+                                            <div class="uk-card uk-card-default"
+                                                style="padding:8px 12px;border-radius: 15px;box-shadow: none;border: 1px solid #c4b9b945; margin:10px 0px 0px 0px;">
+                                                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <circle-progress *ngIf="loaded" [percent]=datastatus[1].range
+                                                            [radius]="30" [backgroundGradient]="true"
+                                                            [backgroundOpacity]="1" [titleFontSize]="14"
+                                                            [backgroundPadding]="-15" [backgroundColor]="'#f9e9e9'"
+                                                            [backgroundGradientStopColor]="'#f9e9e9'"
+                                                            [subtitleFontSize]="12" [outerStrokeWidth]="4"
+                                                            [innerStrokeWidth]="-1" [outerStrokeColor]="'#ec4846e6'"
+                                                            [innerStrokeColor]="'#f6bebe'" [subtitleColor]="'#5db876'"
+                                                            [animation]="true" [animationDuration]="300"
+                                                            [titleColor]="'#ec4846'"
+                                                            [unitsColor]="'#ec4846'"></circle-progress>
+                                                        <app-seleton-loader *ngIf="!loaded" style="margin: 0px"
+                                                            Margin="0px 0px" Cwidth="65" Cheight="65"
+                                                            Circle="true"></app-seleton-loader>
+                                                    </div>
+                                                    <div class="uk-width-expand">
+                                                        <h4 *ngIf="loaded" class="uk-margin-remove-bottom"
+                                                            style="color:#ec4846;">{{datastatus[1].name}}</h4>
+                                                        <h4 *ngIf="!loaded" class="uk-margin-remove-bottom"
+                                                            style="color:#ec4846;">
+                                                            <app-seleton-loader style="margin: 6px 0px;"
+                                                                Margin="4px 0px" Cwidth="40"
+                                                                Cheight="10"></app-seleton-loader>
+                                                        </h4>
+                                                        <span class="uk-text-meta uk-margin-remove-top">
+                                                            <h6 *ngIf="loaded" class="mu-t-size" style="margin: 0">
+                                                                الإصابات : {{datastatus[1].status}}</h6>
+                                                            <h6 *ngIf="loaded" class="mu-t-size"
+                                                                style="margin:0;color: #128e5a;">الشفاء :
+                                                                {{datastatus[1].recovered}}</h6>
+                                                            <app-seleton-loader *ngIf="!loaded" style="margin: 6px 0px;"
+                                                                Margin="4px 0px" Cwidth="100%"
+                                                                Cheight="15"></app-seleton-loader>
+                                                            <app-seleton-loader *ngIf="!loaded" style="margin:0px;"
+                                                                Margin="4px 0px" Cwidth="100%"
+                                                                Cheight="15"></app-seleton-loader>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-xl-12 col-lg-12 col-md-4 col-sm-12">
+                                            <div class="uk-card uk-card-default"
+                                                style="padding:8px 12px;border-radius: 15px;box-shadow: none;border: 1px solid #c4b9b945; margin:10px 0px 0px 0px;">
+                                                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <circle-progress *ngIf="loaded" [percent]=datastatus[2].range
+                                                            [radius]="30" [backgroundGradient]="true"
+                                                            [backgroundOpacity]="1" [titleFontSize]="14"
+                                                            [backgroundPadding]="-15" [backgroundColor]="'#f9e9e9'"
+                                                            [backgroundGradientStopColor]="'#f9e9e9'"
+                                                            [subtitleFontSize]="12" [outerStrokeWidth]="4"
+                                                            [innerStrokeWidth]="-1" [outerStrokeColor]="'#ec4846e6'"
+                                                            [innerStrokeColor]="'#f6bebe'" [subtitleColor]="'#5db876'"
+                                                            [animation]="true" [animationDuration]="300"
+                                                            [titleColor]="'#ec4846'"
+                                                            [unitsColor]="'#ec4846'"></circle-progress>
+                                                        <app-seleton-loader *ngIf="!loaded" style="margin: 0px"
+                                                            Margin="0px 0px" Cwidth="65" Cheight="65"
+                                                            Circle="true"></app-seleton-loader>
+                                                    </div>
+                                                    <div class="uk-width-expand">
+                                                        <h4 *ngIf="loaded" class="uk-margin-remove-bottom"
+                                                            style="color:#ec4846;">{{datastatus[2].name}}</h4>
+                                                        <h4 *ngIf="!loaded" class="uk-margin-remove-bottom"
+                                                            style="color:#ec4846;">
+                                                            <app-seleton-loader style="margin: 6px 0px;"
+                                                                Margin="4px 0px" Cwidth="40"
+                                                                Cheight="10"></app-seleton-loader>
+                                                        </h4>
+                                                        <span class="uk-text-meta uk-margin-remove-top">
+                                                            <h6 *ngIf="loaded" class="mu-t-size" style="margin: 0">
+                                                                الإصابات : {{datastatus[2].status}}</h6>
+                                                            <h6 *ngIf="loaded" class="mu-t-size"
+                                                                style="margin:0;color: #128e5a;">الشفاء :
+                                                                {{datastatus[2].recovered}}</h6>
+                                                            <app-seleton-loader *ngIf="!loaded" style="margin: 6px 0px;"
+                                                                Margin="4px 0px" Cwidth="100%"
+                                                                Cheight="15"></app-seleton-loader>
+                                                            <app-seleton-loader *ngIf="!loaded" style="margin:0px;"
+                                                                Margin="4px 0px" Cwidth="100%"
+                                                                Cheight="15"></app-seleton-loader>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-xl-4 col-lg-12 col-md-12 col-sm-12 ">
+                <div class="uk-card uk-card-default mu-card"
+                    style="padding:8px 12px;border-radius: 15px;border: 1px solid #c4b9b945;">
+                    <div style="text-align: center">
+                        <ul style="padding: 0;">
+                            <li style="border: none;padding-bottom: 0"
+                                class="list-group-item d-flex justify-content-between align-items-center">
+                                <img src="../../assets/svg/iq.jpg" alt="iraq" width="80px" height="80px"
+                                    style="border-radius: 50%;">
+                                <h3
+                                    style="font-family: inherit; font-size: 20px;color: #ec4846;margin:0;font-weight: 600;">
+                                    العراق</h3>
+                                <circle-progress *ngIf="iraqloaded" [percent]=iraqdata[0].range [radius]="30"
+                                    [backgroundGradient]="true" [backgroundOpacity]="1" [titleFontSize]="14"
+                                    [backgroundPadding]="-15" [backgroundColor]="'#f9e9e9'"
+                                    [backgroundGradientStopColor]="'#f9e9e9'" [subtitleFontSize]="12"
+                                    [outerStrokeWidth]="4" [innerStrokeWidth]="-1" [outerStrokeColor]="'#ec4846e6'"
+                                    [innerStrokeColor]="'#f6bebe'" [subtitleColor]="'#5db876'" [animation]="true"
+                                    [animationDuration]="300" [titleColor]="'#ec4846'"
+                                    [unitsColor]="'#ec4846'"></circle-progress>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="list-group" style="padding: 0;">
+                        <li *ngIf="iraqloaded" style="border: none;padding-bottom: 0"
+                            class="list-group-item d-flex justify-content-between align-items-center">
+                            <span *ngIf="iraqloaded" style="font-weight: 600; color: #ec4846">
+                                <i class="fas fa-viruses"></i> مجموع الإصابات</span>
+                            <span *ngIf="iraqloaded">{{iraqdata[0].allcases}}</span>
+
+                        </li>
+                        <li *ngIf="iraqloaded" style="border: none;padding-bottom: 0"
+                            class="list-group-item d-flex justify-content-between align-items-center">
+                            <span *ngIf="iraqloaded" style="font-weight: 600;color:#5db876">
+                                <i class="fas fa-shield-virus"></i> مجموع الشفاء</span>
+                            <span *ngIf="iraqloaded">{{iraqdata[0].allrecovered}}</span>
+                        </li>
+                        <li *ngIf="iraqloaded" style="border: none;border-bottom: 1px solid rgba(0,0,0,.125);"
+                            class="list-group-item d-flex justify-content-between align-items-center">
+                            <span *ngIf="iraqloaded" style="font-weight: 600;">
+                                <i class="fas fa-skull-crossbones"></i> مجموع الوفيات</span>
+                            <span *ngIf="iraqloaded">{{iraqdata[0].alldeaths}}</span>
+                        </li>
+                        <li *ngIf="iraqloaded" style="border: none;padding-bottom: 0"
+                            class="list-group-item d-flex justify-content-between align-items-center">
+                            <span *ngIf="iraqloaded" style="font-weight: 600; color: #ec4846">
+                                <i class="fas fa-ambulance"></i> اصابات اخر يوم</span>
+                            <span *ngIf="iraqloaded">{{iraqdata[0].newcases}} +</span>
+                        </li>
+                        <li *ngIf="iraqloaded" style="border: none;border-bottom: 1px solid rgba(0,0,0,.125);"
+                            class="list-group-item d-flex justify-content-between align-items-center">
+                            <span *ngIf="iraqloaded" style="font-weight: 600;">
+                                <i class="fas fa-user-alt-slash"></i> وفيات اخر يوم</span>
+                            <span *ngIf="iraqloaded">{{iraqdata[0].newdeaths}} +</span>
+                        </li>
+                        <li *ngIf="iraqloaded" style="border: none;padding-bottom: 0"
+                            class="list-group-item d-flex justify-content-between align-items-center">
+                            <span *ngIf="iraqloaded" style="font-weight: 600; color: #ec4846">
+                                <i class="fas fa-hospital-user"></i> الراقدين في المستشفى</span>
+                            <span *ngIf="iraqloaded">{{iraqdata[0].carnt}}</span>
+                        </li>
+                        <li *ngIf="iraqloaded" style="border: none;border-bottom: 1px solid rgba(0,0,0,.125);"
+                            class="list-group-item d-flex justify-content-between align-items-center">
+                            <span *ngIf="iraqloaded" style="font-weight: 600;color:#5db876">
+                                <i class="fas fa-microscope"></i> عدد المفحوصين</span>
+                            <span *ngIf="iraqloaded">{{iraqdata[0].tests}}</span>
+                        </li>
+                        <li *ngIf="iraqloaded" style="border: none;"
+                            class="list-group-item d-flex justify-content-between align-items-center">
+                            <span style="font-weight: 600;">
+                                <i class="fas fa-calendar-alt"></i> تاريخ اخر تحديث</span>
+                            <span>{{iraqdata[0].day}}</span>
+                        </li>
+                        <li *ngIf="!iraqloaded" style="border: none;"
+                            class="list-group-item justify-content-between align-items-center">
+                            <app-seleton-loader Cwidth="100%" Cheight="20" Margin="2px 0px"></app-seleton-loader>
+                        </li>
+                        <li *ngIf="!iraqloaded" style="border: none;"
+                            class="list-group-item justify-content-between align-items-center">
+                            <app-seleton-loader Cwidth="100%" Margin="2px 0px" Cheight="20"></app-seleton-loader>
+                        </li>
+                        <li *ngIf="!iraqloaded" style="border: none;"
+                            class="list-group-item justify-content-between align-items-center">
+                            <app-seleton-loader Cwidth="100%" Margin="2px 0px" Cheight="20"></app-seleton-loader>
+                        </li>
+                        <li *ngIf="!iraqloaded" style="border:  none;"
+                            class="list-group-item justify-content-between align-items-center">
+                            <app-seleton-loader Cwidth="100%" Margin="2px 0px" Cheight="20"></app-seleton-loader>
+                        </li>
+                        <li *ngIf="!iraqloaded" style="border: none;"
+                            class="list-group-item justify-content-between align-items-center">
+                            <app-seleton-loader Cwidth="100%" Margin="2px 0px" Cheight="20"></app-seleton-loader>
+                        </li>
+                        <li *ngIf="!iraqloaded" style="border: none;"
+                            class="list-group-item justify-content-between align-items-center">
+                            <app-seleton-loader Cwidth="100%" Margin="2px 0px" Cheight="20"></app-seleton-loader>
+                        </li>
+                        <li *ngIf="!iraqloaded" style="border: none;"
+                            class="list-group-item justify-content-between align-items-center">
+                            <app-seleton-loader Cwidth="100%" Margin="2px 0px" Cheight="20"></app-seleton-loader>
+                        </li>
+                        <li *ngIf="!iraqloaded" style="border: none;"
+                            class="list-group-item justify-content-between align-items-center">
+                            <app-seleton-loader Cwidth="100%" Margin="2px 0px" Cheight="20"></app-seleton-loader>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div style="padding:15px 15px" *ngIf="loaded">
+    <div class="row">
+        <div class="col-12" style="text-align:center;">
+            <h1
+                style="padding-bottom: 15px;font-family: inherit; font-size: 20px;color: #ec4846;margin:0;font-weight: 600;">
+                احصائية جميع الدول</h1>
+            <div class="uk-margin">
+                <div class="uk-search " style="width:60%">
+                    <span uk-search-icon style="padding-left: 10px"></span>
+                    <input [(ngModel)]="term"
+                        style="border-radius: 12px;padding: 5px;box-shadow: 0 0px 36px rgba(236, 72, 70, 0.18)"
+                        class="uk-search-input" type="search" placeholder="بحث, اكتب اسم الدولة .....">
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 "
+            *ngFor="let state of allstatus[0] |filter:term ;index as i ">
+            <div class="uk-card uk-card-default"
+                style="padding:8px 12px;border-radius: 15px;border: 1px solid #c4b9b945; margin:5px 0px;">
+                <div class="uk-label"
+                    style="position: absolute;color: #fb4c47;font-weight: 900;font-size: 15px;background-color: #ffe1e1;border-radius: 53px;padding: 4px 10px 0px 10px;">
+                    {{i+1}}
+                </div>
+                <img class="mu-m-img" src='../../assets/svg/{{state.Country}}.svg' height="45px"
+                    alt="{{state.Country}}" width="70px"
+                    style="box-shadow: 0px 4px 12px rgba(110, 99, 99, 0.47);border-radius: 4px;margin-left: auto;margin-right: auto;">
+                <h4 class="uk-margin-remove-bottom"
+                    style="color:#035755;text-align: center;font-weight: 600;margin:10px 0">
+                    {{state.Country}}
+                </h4>
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-auto">
+                        <img class="mu-x-img" src='../../assets/svg/{{state.Country}}.svg' height="45px"
+                            alt="{{state.Country}}" width="70px"
+                            style="box-shadow: 0px 4px 12px rgba(110, 99, 99, 0.47);border-radius: 4px;">
+                    </div>
+                    <div class="uk-width-expand">
+                        <span class="uk-text-meta uk-margin-remove-top">
+                            <h6 style="margin: 0">
+                                <i class="fas fa-viruses"></i> الإصابات : {{state.TotalCases}}
+                            </h6>
+                            <h6 style="margin:0;color: #128e5a;">
+                                <i class="fas fa-shield-virus"></i> الشفاء : {{state.TotalRecovered}}
+                            </h6>
+                            <h6 style="margin:0;color: #ec4846;">
+                                <i class="fas fa-skull-crossbones"></i> الوفيات: {{state.TotalDeaths}}
+                            </h6>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<div style="background-image: linear-gradient(white,#fff0f0);">
+    <div class="container">
+        <div class="row" style="padding-top:50px;">
+            <div class="col-3" style="font-size: 13px;padding: 3px;">
+                <img src="../../assets/img/corona-logo.svg" width="25" height="30" alt="" loading="COVID-19"> COVID-19
+            </div>
+            <div class="col-6" style="text-align:center">
+                <span style="color:#128e5a;font-size: 13px;">Thanks to
+                    <a style="color: #fc6561;" href="https://dribbble.com/Pixelspark">Pixelspark</a>
+                    team for design photos</span>
+            </div>
+            <div class="col-3" style="text-align: center;     padding: 0px;">
+                <a href="https://www.linkedin.com/in/muqtada-najm/">
+                    <i class="fab fa-linkedin" style="font-size:22px;padding:5px;color:#035755;"></i>
+                </a>
+                <a href="https://t.me/wounds">
+                    <i class="fab fa-telegram-plane" style="font-size:22px;padding:5px;color:#035755;"></i>
+                </a>
+                <a href="https://instagram.com/077.f">
+                    <i class="fab fa-instagram" style="font-size:22px;padding:5px;color:#035755;"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" style="text-align:center;">
+                <h6>2020 @ All rights reserved by
+                    <a href="https://season-iq.com" style="color:#128e5a">season-iq</a> by Muqtada Najm
+                </h6>
+            </div>
+        </div>
+    </div>
+</div>

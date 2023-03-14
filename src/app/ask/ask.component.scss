@@ -1,0 +1,210 @@
+
+
+.mu-active{
+      color: #ec433c;
+    box-shadow: 0 0px 13px #ec433c;
+}
+
+
+
+
+
+ // Extra small devices (portrait phones, less than 576px)
+ @media (max-width: 575.98px)  { 
+    .mu-button {
+        border-radius: 20px; color:#fb4c47;border-color:#fb4c47;
+     } 
+     .mu-button:hover{
+         color:white;
+         background-color: #fb4c47;
+         border-color: #fb4c47;
+     }
+     .btn-outline-success.focus,.btn-outline-success:focus{box-shadow:0 0 0 .2rem #fb4c47}
+     .mu-home{
+        width:100%; height:100%;  background-image: linear-gradient(#fff8f8, white);padding-bottom: 20pxs;
+     }
+    
+    .mu-active{
+          color: #ec433c;
+        box-shadow: 0 0px 13px #ec433c;
+    }
+    .mu-m-t{
+        text-align: center;padding:10px 10%;
+    }
+    .mu-m-h{
+        margin:0;color:#128e5a;font-weight:800; padding-top:15px;
+        font-size:19px;
+    }
+    .mu-m-b{
+        width:58%
+    }
+    .mu-coll{
+        margin-top:20px;
+    }
+    .mu-button-2 {
+        margin-top:10px
+         } 
+         .uk-card-body{
+            padding: 30px 0px;
+
+         }
+ }
+
+
+
+
+
+
+
+
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    
+    .mu-button {
+        border-radius: 20px; color:#fb4c47;border-color:#fb4c47;
+     } 
+     .mu-button:hover{
+         color:white;
+         background-color: #fb4c47;
+         border-color: #fb4c47;
+     }
+     .btn-outline-success.focus,.btn-outline-success:focus{box-shadow:0 0 0 .2rem #fb4c47}
+     .mu-home{
+        width:100%; height:100%;  background-image: linear-gradient(#fff8f8, white);padding-bottom: 20pxs;
+    }
+    .mu-m-t{
+        text-align: center;padding:10px 10%;
+    }
+    .mu-m-h{
+        margin:0;color:#128e5a;font-weight:800; padding-top:15px;
+        font-size:19px;
+    }
+    .mu-m-b{
+        width:75%
+    }
+    .mu-coll{
+        margin-top:20px;
+    }
+    .mu-button-2 {
+        margin-top:10px
+         } 
+  
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .mu-button {
+        border-radius: 20px; color:#fb4c47;border-color:#fb4c47;
+     } 
+     .mu-button:hover{
+         color:white;
+         background-color: #fb4c47;
+         border-color: #fb4c47;
+     }
+     .btn-outline-success.focus,.btn-outline-success:focus{box-shadow:0 0 0 .2rem #fb4c47}
+     .mu-home{
+        width:100%; height:100%;  background-image: linear-gradient(#fff8f8, white);padding-bottom: 20pxs;
+    } 
+    .mu-m-h{
+        margin:0;color:#128e5a;font-weight:800; padding-top:15px
+    }
+    .mu-m-b{
+        width:80%
+    }
+    .mu-coll{
+        margin-top:20px;
+    }
+    .mu-button-2 {
+        margin-top:10px
+         } 
+    
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .mu-button {
+        border-radius: 20px; color:#fb4c47;border-color:#fb4c47;
+     } 
+     .mu-button:hover{
+         color:white;
+         background-color: #fb4c47;
+         border-color: #fb4c47;
+     }
+     .btn-outline-success.focus,.btn-outline-success:focus{box-shadow:0 0 0 .2rem #fb4c47}
+     .mu-home{
+        width:100%; height:100%;  background-image: linear-gradient(#fff8f8, white);padding-bottom: 20pxs;
+    }
+    .mu-m-t{
+        text-align: center;padding:10px 19%;
+    }
+    .mu-m-h{
+        margin:0;color:#128e5a;font-weight:800; padding-top:15px
+    }
+    .mu-m-b{
+        width:75%
+    }
+ }
+
+
+
+
+
+
+
+ @media (min-width: 1200px) {
+    .mu-button {
+        border-radius: 20px; color:#fb4c47;border-color:#fb4c47;
+     } 
+     .mu-button:hover{
+         color:white;
+         background-color: #fb4c47;
+         border-color: #fb4c47;
+     }
+     .btn-outline-success.focus,.btn-outline-success:focus{box-shadow:0 0 0 .2rem #fb4c47}
+     .mu-home{
+        width:100%; height:100%;  background-image: linear-gradient(#fff8f8, white);padding-bottom: 20pxs;
+    }
+    .mu-m-t{
+        text-align: center;padding:10px 28%;
+    }
+    .mu-m-h{
+        margin:0;color:#128e5a;font-weight:800; padding-top:15px
+    }
+    .mu-m-b{
+        width:79%
+    }
+
+ }

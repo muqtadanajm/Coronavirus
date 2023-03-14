@@ -1,0 +1,104 @@
+.mu-button {
+    border-radius: 20px; color:#fb4c47;border-color:#fb4c47;
+ } 
+ .mu-button:hover{
+     color:white;
+     background-color: #fb4c47;
+     border-color: #fb4c47;
+ }
+ .mu-home{
+    width:100%; height:100%;  background-image: linear-gradient(#fff8f8, white);padding-bottom: 20pxs;
+ }
+ .round{
+     min-height: 255px;
+     margin-top:30px;
+     position: relative;
+     margin-bottom: 20px;
+ }
+ .round strong{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     margin-top: -50px;
+     transform: translate(-50%);
+     font-size: 40px;
+     color:#212121;
+     font-weight: 100;
+ }
+
+ .mu-m-img{
+    display: none;
+}
+.mu-x-img{
+    display: block;
+}
+
+ // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .mu-title{
+        font-size: 20px;font-weight: 500;color:#ec4846;
+    }
+    .mu-card{
+        margin: 10px 0px;
+    }
+    .mu-button-2 {
+        margin-top:10px
+         } 
+  }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .mu-title{
+        font-size: 20px;font-weight: 500;color:#ec4846;
+    }
+    .mu-card{
+        margin: 10px 0px;
+    }
+    .mu-button-2 {
+        margin-top:10px
+         } 
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .mu-title{
+        font-size: 20px;font-weight: 500;color:#ec4846;
+    }
+    .mu-num{
+        font-size: 24px
+    }
+    .mu-t-size{
+        font-size: 13px;
+    }
+    .mu-button-2 {
+        margin-top:10px
+         } 
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .mu-title{
+        font-size: 20px;font-weight: 500;color:#ec4846;
+    }
+    .mu-m-img{
+        display: block;
+    }
+    .mu-x-img{
+        display: none;
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) and (max-width: 1350px){ 
+    .mu-title{
+        font-size: 20px;font-weight: 500;color:#ec4846;
+    }
+    .mu-num{
+        font-size: 24px
+    }
+ }
+ @media (min-width: 1350px) { 
+    .mu-title{
+        font-size: 20px;font-weight: 500;color:#ec4846;
+    }
+ }
