@@ -31,11 +31,6 @@ The key features of this application are:
 - Comprehensive FAQ section with answers from the World Health Organization.
 
 
-## How to Use
-To use this application, simply navigate to the following URL: https://github.com/your_username/coronavirus_angular_project
-
-From there, you can interact with the various features described above.
-
 
 ## Installation
 
