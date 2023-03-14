@@ -87,7 +87,7 @@ This project is open for contributions. If you have any suggestions or improveme
 ## Screenshots
 
 <p float="left">
-  <img src="https://github.com/muqtadanajm/Coronavirus/blob/main/Screenshots/Screenshot_1.png" width="100%"/>
-  <img src="https://github.com/muqtadanajm/Coronavirus/blob/main/Screenshots/Screenshot_2.png" width="100%"/>
-  <img src="https://github.com/muqtadanajm/Coronavirus/blob/main/Screenshots/Screenshot_3.png" width="100%"/>
+  <img src="https://github.com/muqtadanajm/Coronavirus/blob/main/Screenshots/Screenshot-1.png" width="100%"/>
+  <img src="https://github.com/muqtadanajm/Coronavirus/blob/main/Screenshots/Screenshot-2.png" width="100%"/>
+  <img src="https://github.com/muqtadanajm/Coronavirus/blob/main/Screenshots/Screenshot-3.png" width="100%"/>
 </p>
