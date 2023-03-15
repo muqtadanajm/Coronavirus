@@ -71,7 +71,7 @@ The project is protected by a copyright certificate and is subject to its terms.
 This project is open for contributions. If you have any suggestions or improvements in mind, please feel free to raise an issue or submit a pull request.
 ## Thanks
 
-+  I would like to extend a special thank you to Mina Masoodi for her help in correcting spelling errors. Your contributions have been instrumental in making this project a success.
++  I would like to extend a special thank you to Mina Masoodi for her help in correcting spelling mistakes. Your contributions have been instrumental in making this project a success.
 
 ## Autho
 
